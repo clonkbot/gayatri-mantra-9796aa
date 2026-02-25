@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sacred color palette */
+:root {
+  --saffron: #E07C24;
+  --gold: #C9A227;
+  --cream: #FFF8E7;
+  --maroon: #4A0E0E;
+  --cosmic-black: #0A0506;
+}
+
+/* Custom font imports are handled via Google Fonts in index.html */
+
+.font-display {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-body {
+  font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+}
+
+/* Smooth scrolling and selection colors */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgba(201, 162, 39, 0.3);
+  color: #FFF8E7;
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar for the sacred aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cosmic-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--maroon);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+/* Body defaults */
+body {
+  background-color: var(--cosmic-black);
+  color: var(--cream);
+  font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Ensure Devanagari text renders beautifully */
+@supports (font-variation-settings: normal) {
+  body {
+    font-optical-sizing: auto;
+  }
+}
